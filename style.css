@@ -1,0 +1,255 @@
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /*Gradient Background*/
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+
+    /*Gradient Circle*/
+
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /*Use transparency to get the colour variations 
+    necessary to match the design. 
+    Hint: look into using `hsla()`.*/
+
+    --font-main: 'Hanken Grotesk', sans-serif;
+    /*Weights: 500, 700, 800;*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+
+    font-family: var(--font-main);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+
+    margin: 8rem 5rem 5rem 5rem; /*centralizar no documento*/
+    width: 600px;
+    height: 350px;
+
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 12px 32px -5px rgba(0, 0, 0, 0.34);
+    box-shadow: 1px 12px 32px -5px rgba(0, 0, 0, 0.34);
+
+    overflow: hidden;
+}
+
+/*Result*/
+.result-container {
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+    padding: 2rem;
+
+    background: 
+        linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%));
+
+    border-radius: 15px;
+}
+
+.your-result {
+    font-weight: 700;
+    color: var(--light-lavender);
+    margin-bottom: 1rem;
+}
+
+.result-score {
+    display: grid;
+    place-content: center;
+
+    width: 140px;
+    height: 140px;
+
+    background: 
+    linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)); 
+
+    -moz-border-radius: 70px; 
+    -webkit-border-radius: 70px; 
+    border-radius: 70px;
+}
+
+.result {
+    color: var(--white);
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.result-cem {
+    font-size: 13px;
+    opacity: 0.5;
+    color: var(--light-lavender);
+    margin-top: 0.5rem;
+}
+
+.great {
+    margin: 1rem;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.result-text {
+    color: var(--light-lavender);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/*Summary*/
+.summary-container {
+    display: grid;
+    padding: 2rem;
+    text-wrap: nowrap;
+}
+
+.summary-title {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.summary-name {
+    margin-right: 4rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.summary-score {
+    color: hsl(224, 30%, 27%, 0.3);
+}
+
+b {
+    color: var(--dark-gray-blue);
+    font-weight: 700;
+}
+
+.reaction-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+
+    background: hsl(0, 100%, 67%, 0.3);
+    border-radius: 5px;
+}
+
+.react {
+    color: var(--light-red);
+}
+
+.memory-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 100%;
+
+    background: hsl(39, 100%, 56%, 0.3);
+    border-radius: 5px;
+}
+
+.memory {
+    color: var(--orangey-yellow);
+    margin-right: 4.5rem;
+}
+
+.verbal-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    
+    background: hsl(166, 100%, 37%, 0.3);
+    border-radius: 5px;
+}
+
+.verbal {
+    color: var(--green-teal);
+    margin-right: 5.5rem;
+}
+
+.visual-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 100%;
+
+    background: hsl(234, 85%, 45%, 0.3);
+    border-radius: 5px;
+}
+
+.visual {
+    color: var(--cobalt-blue);
+    margin-right: 5.5rem;
+}
+
+.button {
+    color: var(--white);
+    font-weight: 700;
+
+    background: 
+    linear-gradient(
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%));
+    border: none;
+    border-radius: 25px;
+
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background: 
+    linear-gradient(
+    hsl(224, 30%, 27%),
+    #000000);
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        display: grid;
+        margin: 2rem auto;
+        width: 350px;
+        height: 700px;
+    }
+    
+    .attribution {
+        display: none;
+    }
+}
